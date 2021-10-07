@@ -1,4 +1,5 @@
 <?php
+$response = array("");
 
 if(isset($_POST['submit'])){
     $Pincode = $_POST['pincode'];
@@ -37,7 +38,7 @@ if(isset($_POST['submit'])){
 
 
 <?php
-
+if(isset($_POST['submit'])){
 foreach($response['centers'] as $list){
     foreach($list['sessions'] as $sessions){
     echo "
@@ -54,5 +55,5 @@ foreach($response['centers'] as $list){
     ";
     }
 }
-
+}
 ?>
